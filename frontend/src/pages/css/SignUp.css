@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+}
