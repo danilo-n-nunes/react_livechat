@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -15,6 +15,7 @@ import Container from '@material-ui/core/Container';
 import {withRouter} from 'react-router-dom'
 import api from "../../services/api";
 import { login } from "../../services/auth";
+import { DataContext } from '../../contexts/auth';
 
 function Copyright() {
   return (
@@ -52,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const SignIn = props => {
+  const context = useContext(DataContext)
   const classes = useStyles();
   const [values,setValues] = useState({
     email: "",
@@ -69,6 +71,7 @@ const SignIn = props => {
           const response = await api.post("/auth", { email, password });
           console.log(response.data.token)
           login(response.data.token);
+          context.Loga(response.data.user)
           props.history.push("/app");
         } catch (err) {
           setValues({error: "Houve um problema com o login, verifique suas credenciais. T.T"});
