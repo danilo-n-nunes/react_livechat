@@ -1,21 +1,17 @@
 import React, { useState } from 'react'
 import api from '../services/api'
 
-const initialState = {
-    number: 123,
-    text: "texto"
+export const initialState = {
+    name: "",
+    email: ""
 }
 export const DataContext = React.createContext(initialState)
 
 const MainContext = props =>{
-    const [user, setUser] = useState({
-        name: "xxx",
-        email: "@"
-    })
+    const [user, setUser] = useState(initialState)
     const Loga = (user) =>{
         setUser({
-            name: user.name,
-            email: user.email
+            ...user
         })
     }
 

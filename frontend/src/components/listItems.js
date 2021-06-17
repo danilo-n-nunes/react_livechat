@@ -13,26 +13,32 @@ import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 import StarIcon from '@material-ui/icons/Star';
 import EventAvailableIcon from '@material-ui/icons/EventAvailable';
 import { DataContext } from '../contexts/auth';
+import { Redirect, useHistory } from 'react-router-dom';
 
-export const MainListItems = props =>{ 
+export const MainListItems = props =>{
+  const history = useHistory()
   const context = useContext(DataContext)
 return(
   <div>
-    <ListItem button>
+    <ListItem button
+      onClick={()=>history.push("/app")}
+    >
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
     <ListItem button
-      onClick={()=>console.log(context.user.name)}
+      onClick={()=>history.push("/account")}
     >
       <ListItemIcon>
         <PersonIcon />
       </ListItemIcon>
       <ListItemText primary="Conta" />
     </ListItem>
-    <ListItem button>
+    <ListItem button
+      onClick={()=>console.log(context.user)}
+    >
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
@@ -44,7 +50,9 @@ return(
       </ListItemIcon>
       <ListItemText primary="Galeria" />
     </ListItem>
-    <ListItem button>
+    <ListItem button
+      onClick={()=>history.push("/camera")}
+    >
       <ListItemIcon>
         <VideoCallIcon />
       </ListItemIcon>

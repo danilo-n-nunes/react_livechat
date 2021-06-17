@@ -71,7 +71,7 @@ const SignIn = props => {
           const response = await api.post("/auth", { email, password });
           console.log(response.data.token)
           login(response.data.token);
-          context.Loga(response.data.user)
+          context.setUser(response.data.user)
           props.history.push("/app");
         } catch (err) {
           setValues({error: "Houve um problema com o login, verifique suas credenciais. T.T"});

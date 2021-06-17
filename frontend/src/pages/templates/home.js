@@ -22,54 +22,56 @@ import { mainListItems, secondaryListItems } from './listItems';
 import ImgMediaCard from './news'
 import MenuDashBoard from '../templates/MenuDashBoard';
 
-const Home = props =>{
-    // <Grid container spacing={3}>
-    //         {/* Chart */}
-    //         <Grid item xs={12} md={8} lg={3}>
-    //           {/* <Paper className={fixedHeightPaper}>
-    //             {/* <Chart /> 
-    //           </Paper> */}
-    //             <ImgMediaCard 
-    //               name="Michael Jackson"
-    //               news="Michael Jackson está vivo? Saiba como teorias dizem que sim"
-    //               urlImage="https://files.nsctotal.com.br/s3fs-public/graphql-upload-files/capa_8.jpg?8dVs_tPGPGyRI.rokYBUJrX9OjphfJvB"
-    //             />
-    //         </Grid>
-    //         <Grid item xs={12} md={8} lg={3}>
-    //           {/* <Paper className={fixedHeightPaper}>
-    //             {/* <Chart /> 
-    //           </Paper> */}
-    //             <ImgMediaCard 
-    //               name="Anita"
-    //               news="Anita explode depois de sua nova musica. confira..."
-    //               urlImage="https://lh3.googleusercontent.com/proxy/bVCb7lnPKT3bQQRgtwEHaqmx-rgnsRw7pAeqyKgaQyEnxcBU-WZVnGHbnSaS1444VEOI4mnboCvvXYB1UM3tENSwkNum4rCMZlpwmK7LuiiN36i5hQfImf_18r1XCg_UGcY"
-    //             />
-    //         </Grid>
-    //         {/* Recent Deposits */}
-    //         <Grid item xs={12} md={4} lg={2}>
-    //           {/* <Paper className={fixedHeightPaper}>
-    //             {/* <Deposits /> 
-    //           </Paper> */}
-    //           <ImgMediaCard 
-    //               name="Problemas na VideoChamada?"
-    //               news="Aprenda passo a passo a ter a melhor transmissão"
-    //               urlImage="https://www.neoassist.com/wp-content/uploads/2020/04/video-chat-02-1024x683.jpg"
-    //               height={"69"}
-    //             />
-    //         </Grid>
-    //         <Grid item xs={12} md={4} lg={2}>
-    //           <Paper className={fixedHeightPaper}>
-    //             {/* <Deposits /> */}
-    //           </Paper>
-    //         </Grid>
-    //         {/* Recent Orders */}
-    //         <Grid item xs={12}>
-    //           <Paper className={classes.paper}>
-    //             {/* <Orders /> */}
-    //           </Paper>
-    //         </Grid>
-    //       </Grid>
-    //       <Box pt={4}>
-    //         <Copyright />
-    //       </Box>
-}
+const Home = props =>(
+    <>
+    <Grid container spacing={3}>
+            {/* Chart */}
+            <Grid item xs={12} md={8} lg={3}>
+              {/* <Paper className={fixedHeightPaper}>
+                {/* <Chart /> 
+              </Paper> */}
+                <ImgMediaCard 
+                  name="Michael Jackson"
+                  news="Michael Jackson está vivo? Saiba como teorias dizem que sim"
+                  urlImage="https://files.nsctotal.com.br/s3fs-public/graphql-upload-files/capa_8.jpg?8dVs_tPGPGyRI.rokYBUJrX9OjphfJvB"
+                />
+            </Grid>
+            <Grid item xs={12} md={8} lg={3}>
+              {/* <Paper className={fixedHeightPaper}>
+                {/* <Chart /> 
+              </Paper> */}
+                <ImgMediaCard 
+                  name="Anita"
+                  news="Anita explode depois de sua nova musica. confira..."
+                  urlImage="https://lh3.googleusercontent.com/proxy/bVCb7lnPKT3bQQRgtwEHaqmx-rgnsRw7pAeqyKgaQyEnxcBU-WZVnGHbnSaS1444VEOI4mnboCvvXYB1UM3tENSwkNum4rCMZlpwmK7LuiiN36i5hQfImf_18r1XCg_UGcY"
+                />
+            </Grid>
+            {/* Recent Deposits */}
+            <Grid item xs={12} md={4} lg={2}>
+              {/* <Paper className={fixedHeightPaper}>
+                {/* <Deposits /> 
+              </Paper> */}
+              <ImgMediaCard 
+                  name="Problemas na VideoChamada?"
+                  news="Aprenda passo a passo a ter a melhor transmissão"
+                  urlImage="https://www.neoassist.com/wp-content/uploads/2020/04/video-chat-02-1024x683.jpg"
+                  height={"69"}
+                />
+            </Grid>
+            <Grid item xs={12} md={4} lg={2}>
+              <Paper className={fixedHeightPaper}>
+                {/* <Deposits /> */}
+              </Paper>
+            </Grid>
+            {/* Recent Orders */}
+            <Grid item xs={12}>
+              <Paper className={classes.paper}>
+                {/* <Orders /> */}
+              </Paper>
+            </Grid>
+          </Grid>
+          <Box pt={4}>
+            <Copyright />
+          </Box>
+    </>
+)
